@@ -34,5 +34,5 @@ document.getElementById('calcBtn').addEventListener('click', () => {
     let {monthlyPayment, monthlyRate, amortization} = calculateAmortization(principal, years, rate);
     document.getElementById("monthlyPayment").innerHTML = monthlyPayment.toFixed(2);
     document.getElementById("monthlyRate").innerHTML = (monthlyRate * 100).toFixed(2);
-    amortization.forEach(month => console.log(month));
+    calculateAmortization(principal, years, rate).amortization.forEach(month => console.log(month));
 });
